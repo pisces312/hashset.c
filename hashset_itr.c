@@ -47,7 +47,7 @@ int hashset_iterator_has_next(hashset_itr_t itr)
 
   /* peek to find another entry */
   index = itr->index;
-  while(index <= itr->set->capacity -1)
+  if(index <= itr->set->capacity -1)
   {
     size_t value = itr->set->items[index];
     if(value != 0)
